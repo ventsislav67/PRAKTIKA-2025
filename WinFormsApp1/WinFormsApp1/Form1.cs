@@ -1,4 +1,4 @@
-using System.Media;
+п»їusing System.Media;
 
 namespace WinFormsApp1
 {
@@ -7,7 +7,7 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
-            lblReultat.Text = ""; // Начално празно съобщение
+            lblReultat.Text = ""; // РќР°С‡Р°Р»РЅРѕ РїСЂР°Р·РЅРѕ СЃСЉРѕР±С‰РµРЅРёРµ
         }
 
         private void btnDobavi_Click(object sender, EventArgs e)
@@ -23,26 +23,26 @@ namespace WinFormsApp1
 
         private async void btnSwari_Click(object sender, EventArgs e)
         {
-            // Правим списък от всички съставки, превърнати в малки букви
+            // РџСЂР°РІРёРј СЃРїРёСЃСЉРє РѕС‚ РІСЃРёС‡РєРё СЃСЉСЃС‚Р°РІРєРё, РїСЂРµРІСЉСЂРЅР°С‚Рё РІ РјР°Р»РєРё Р±СѓРєРІРё
             List<string> sastavki = new List<string>();
             foreach (var item in listBoxSastavki.Items)
             {
                 sastavki.Add(item.ToString().ToLower());
             }
 
-            string rezultat = "Получената отвара бълбука, но нищо интересно не се случва.";
+            string rezultat = "РџРѕР»СѓС‡РµРЅР°С‚Р° РѕС‚РІР°СЂР° Р±СЉР»Р±СѓРєР°, РЅРѕ РЅРёС‰Рѕ РёРЅС‚РµСЂРµСЃРЅРѕ РЅРµ СЃРµ СЃР»СѓС‡РІР°.";
 
-            if (sastavki.Contains("котешка козина") && sastavki.Contains("течен азот"))
+            if (sastavki.Contains("РєРѕС‚РµС€РєР° РєРѕР·РёРЅР°") && sastavki.Contains("С‚РµС‡РµРЅ Р°Р·РѕС‚"))
             {
-                rezultat = "Създаде невидимост за 10 минути!";
+                rezultat = "РЎСЉР·РґР°РґРµ РЅРµРІРёРґРёРјРѕСЃС‚ Р·Р° 10 РјРёРЅСѓС‚Рё!";
             }
-            else if (sastavki.Contains("ягода") && sastavki.Contains("захар"))
+            else if (sastavki.Contains("СЏРіРѕРґР°") && sastavki.Contains("Р·Р°С…Р°СЂ"))
             {
-                rezultat = "Създаде вкусно сладко!";
+                rezultat = "РЎСЉР·РґР°РґРµ РІРєСѓСЃРЅРѕ СЃР»Р°РґРєРѕ!";
             }
-            else if (sastavki.Contains("батерия") && sastavki.Contains("вода"))
+            else if (sastavki.Contains("Р±Р°С‚РµСЂРёСЏ") && sastavki.Contains("РІРѕРґР°"))
             {
-                rezultat = "Създаде експлозивен серум… стой далеч!";
+                rezultat = "РЎСЉР·РґР°РґРµ РµРєСЃРїР»РѕР·РёРІРµРЅ СЃРµСЂСѓРјвЂ¦ СЃС‚РѕР№ РґР°Р»РµС‡!";
             }
 
             await PokajiSustoqnie(rezultat);
@@ -57,7 +57,7 @@ namespace WinFormsApp1
             foreach (char bukva in tekst)
             {
                 lblReultat.Text += bukva;
-                await Task.Delay(50); // анимация буква по буква
+                await Task.Delay(50); // Р°РЅРёРјР°С†РёСЏ Р±СѓРєРІР° РїРѕ Р±СѓРєРІР°
             }
         }
 
@@ -74,14 +74,14 @@ namespace WinFormsApp1
 
         private async void btnSwari_Click_1(object sender, EventArgs e)
         {
-            lblReultat.Text = "Отварата се сварява...";
+            lblReultat.Text = "РћС‚РІР°СЂР°С‚Р° СЃРµ СЃРІР°СЂСЏРІР°...";
             Application.DoEvents();
 
-            // Пускане на звук по време на варенето
+            // РџСѓСЃРєР°РЅРµ РЅР° Р·РІСѓРє РїРѕ РІСЂРµРјРµ РЅР° РІР°СЂРµРЅРµС‚Рѕ
             SoundPlayer zvuk = new SoundPlayer("magic.wav");
             zvuk.Play();
 
-            Thread.Sleep(2000); // чака 2 секунди
+            Thread.Sleep(2000); // С‡Р°РєР° 2 СЃРµРєСѓРЅРґРё
             zvuk.Stop();
 
             List<string> sastavki = new List<string>();
@@ -91,25 +91,25 @@ namespace WinFormsApp1
                 sastavki.Add(item.ToString().ToLower());
             }
 
-            string rezultat = "Получената отвара бълбука, но нищо интересно не се случва.";
+            string rezultat = "РџРѕР»СѓС‡РµРЅР°С‚Р° РѕС‚РІР°СЂР° Р±СЉР»Р±СѓРєР°, РЅРѕ РЅРёС‰Рѕ РёРЅС‚РµСЂРµСЃРЅРѕ РЅРµ СЃРµ СЃР»СѓС‡РІР°.";
 
-            if (sastavki.Contains("котешка козина") && sastavki.Contains("течен азот"))
+            if (sastavki.Contains("РєРѕС‚РµС€РєР° РєРѕР·РёРЅР°") && sastavki.Contains("С‚РµС‡РµРЅ Р°Р·РѕС‚"))
             {
-                rezultat = "Създаде невидимост за 10 минути!";
-                listBoxSastavki.Items.Remove("котешка козина");
-                listBoxSastavki.Items.Remove("течен азот");
+                rezultat = "РЎСЉР·РґР°РґРµ РЅРµРІРёРґРёРјРѕСЃС‚ Р·Р° 10 РјРёРЅСѓС‚Рё!";
+                listBoxSastavki.Items.Remove("РєРѕС‚РµС€РєР° РєРѕР·РёРЅР°");
+                listBoxSastavki.Items.Remove("С‚РµС‡РµРЅ Р°Р·РѕС‚");
             }
-            else if (sastavki.Contains("ягода") && sastavki.Contains("захар"))
+            else if (sastavki.Contains("СЏРіРѕРґР°") && sastavki.Contains("Р·Р°С…Р°СЂ"))
             {
-                rezultat = "Създаде вкусно сладко!";
-                listBoxSastavki.Items.Remove("ягода");
-                listBoxSastavki.Items.Remove("захар");
+                rezultat = "РЎСЉР·РґР°РґРµ РІРєСѓСЃРЅРѕ СЃР»Р°РґРєРѕ!";
+                listBoxSastavki.Items.Remove("СЏРіРѕРґР°");
+                listBoxSastavki.Items.Remove("Р·Р°С…Р°СЂ");
             }
-            else if (sastavki.Contains("батерия") && sastavki.Contains("вода"))
+            else if (sastavki.Contains("Р±Р°С‚РµСЂРёСЏ") && sastavki.Contains("РІРѕРґР°"))
             {
-                rezultat = "Създаде експлозивен серум… стой далеч!";
-                listBoxSastavki.Items.Remove("батерия");
-                listBoxSastavki.Items.Remove("вода");
+                rezultat = "РЎСЉР·РґР°РґРµ РµРєСЃРїР»РѕР·РёРІРµРЅ СЃРµСЂСѓРјвЂ¦ СЃС‚РѕР№ РґР°Р»РµС‡!";
+                listBoxSastavki.Items.Remove("Р±Р°С‚РµСЂРёСЏ");
+                listBoxSastavki.Items.Remove("РІРѕРґР°");
             }
 
             await PokajiSustoqnie(rezultat);
