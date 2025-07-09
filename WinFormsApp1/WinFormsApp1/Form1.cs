@@ -113,10 +113,11 @@ namespace WinFormsApp1
             }
 
             await PokajiSustoqnie(rezultat);
+            listBoxSastavki.Items.Clear();
         }
 
     }
-   }
+}
    
 
 
