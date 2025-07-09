@@ -1,3 +1,5 @@
+using System.Media;
+
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
@@ -49,12 +51,13 @@ namespace WinFormsApp1
         private async Task PokajiSustoqnie(string tekst)
         {
             lblReultat.Text = "";
-            lblReultat.ForeColor = Color.DarkMagenta;
+            lblReultat.ForeColor = Color.White;
+            lblReultat.Font = new Font("Segoe UI", 15, FontStyle.Bold);
 
             foreach (char bukva in tekst)
             {
                 lblReultat.Text += bukva;
-                await Task.Delay(40); // Магическа анимация
+                await Task.Delay(50); // анимация буква по буква
             }
         }
 
@@ -69,8 +72,18 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnSwari_Click_1(object sender, EventArgs e)
+        private async void btnSwari_Click_1(object sender, EventArgs e)
         {
+            lblReultat.Text = "Отварата се сварява...";
+            Application.DoEvents();
+
+            // Пускане на звук по време на варенето
+            SoundPlayer zvuk = new SoundPlayer("magic.wav");
+            zvuk.Play();
+
+            Thread.Sleep(2000); // чака 2 секунди
+            zvuk.Stop();
+
             List<string> sastavki = new List<string>();
 
             foreach (var item in listBoxSastavki.Items)
@@ -83,7 +96,6 @@ namespace WinFormsApp1
             if (sastavki.Contains("котешка козина") && sastavki.Contains("течен азот"))
             {
                 rezultat = "Създаде невидимост за 10 минути!";
-                // Премахваме използваните съставки
                 listBoxSastavki.Items.Remove("котешка козина");
                 listBoxSastavki.Items.Remove("течен азот");
             }
@@ -100,12 +112,11 @@ namespace WinFormsApp1
                 listBoxSastavki.Items.Remove("вода");
             }
 
-            lblReultat.Text = rezultat;
-
-
-
+            await PokajiSustoqnie(rezultat);
         }
+
     }
    }
+   
 
 

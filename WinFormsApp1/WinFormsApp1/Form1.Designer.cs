@@ -34,6 +34,7 @@
             btnSwari = new Button();
             lblReultat = new Label();
             label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // txtSastavka
@@ -64,7 +65,7 @@
             listBoxSastavki.ForeColor = Color.Black;
             listBoxSastavki.FormattingEnabled = true;
             listBoxSastavki.ItemHeight = 18;
-            listBoxSastavki.Location = new Point(693, 172);
+            listBoxSastavki.Location = new Point(669, 210);
             listBoxSastavki.Name = "listBoxSastavki";
             listBoxSastavki.Size = new Size(218, 40);
             listBoxSastavki.TabIndex = 2;
@@ -104,6 +105,17 @@
             label1.TabIndex = 5;
             label1.Text = "Създай своята отвара сега";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(648, 156);
+            label2.Name = "label2";
+            label2.Size = new Size(261, 29);
+            label2.TabIndex = 6;
+            label2.Text = "Списък на елементи";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -112,6 +124,7 @@
             BackgroundImage = Properties.Resources.dark_magic_exlp6w1wrf3fe73i;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1092, 745);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lblReultat);
             Controls.Add(btnSwari);
@@ -133,5 +146,6 @@
         private Button btnSwari;
         private Label lblReultat;
         private Label label1;
+        private Label label2;
     }
 }

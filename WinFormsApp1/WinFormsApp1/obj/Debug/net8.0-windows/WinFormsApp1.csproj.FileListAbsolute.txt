@@ -16,3 +16,4 @@ C:\Users\venci\OneDrive\Работен плот\PRAKTIKA\PRAKTIKA-2025\WinFormsA
 C:\Users\venci\OneDrive\Работен плот\PRAKTIKA\PRAKTIKA-2025\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\venci\OneDrive\Работен плот\PRAKTIKA\PRAKTIKA-2025\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
 C:\Users\venci\OneDrive\Работен плот\PRAKTIKA\PRAKTIKA-2025\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Properties.Resources.resources
+C:\Users\venci\OneDrive\Работен плот\PRAKTIKA\PRAKTIKA-2025\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\magic.wav
